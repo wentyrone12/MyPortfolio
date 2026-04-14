@@ -9,15 +9,24 @@
     --bg-color: #111;
     --text-color: white;
     --secondary-color: #222;
+
+    --btn-color: gold;
+    --btn-cl: gold;
+    --btn-colors: cyan;
 }
 
 body.light-mode {
     --bg-color: rgb(215, 215, 215);
     --text-color: #111;
     --secondary-color: #eee;
+
+    --btn-color: black;
+    --btn-cl: red;
+    --btn-colors: green;
 }
 
 body {
+
     font-family: Arial, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -61,6 +70,7 @@ body {
 }
 .link{
     margin: 30px;
+    color: var(--btn-linkcolor);
 }
 .nav-links li a:hover {
     color: #0ff;
@@ -92,13 +102,13 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-.socials a {
-    color: #0ff;
+.link-tag{
+    color: var(--btn-colors);
     margin-right: 10px;
     text-decoration: none;
 }
 
-.socials a:hover {
+.link-tag:hover {
     text-decoration: underline;
 }
 
@@ -182,8 +192,22 @@ button:hover {
 }
 .btn-project{
     box-shadow: 0px 0px 8px 1px gray;
-    background-color: gold;
+    background: linear-gradient(270deg, cyan, red, gold, cyan);
+    background-size: 600% 600%;
+    animation: bgMove 8s ease infinite;
+    transition: 0.4s ease;
     text-align: center;
+}
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .btn-project:hover{
     background-color: darkorange;
@@ -254,9 +278,10 @@ button:hover {
     display: inline-block;
     border-radius: 25px;
     background-color: transparent;
-    border: 2px solid gold;
-    box-shadow: 0 0 5px 5px red;
+    border: 1px solid gray;
+    box-shadow: 0 0 2px 2px var(--btn-color);
     transition: 0.5s ease-in-out;
+    animation: glowCycle 4s infinite linear;
     filter: blur(2px);
 }
 .container:hover{
@@ -270,5 +295,26 @@ button:hover {
     top: 50px;
     justify-items: center;
     text-decoration: none;
-    color: green;
+    color: var(--btn-color);
+}
+@keyframes glowCycle {
+  0% {
+    border-color: cyan;
+    box-shadow: 0 0 15px 8px cyan;
+  }
+
+  33% {
+    border-color: red;
+    box-shadow: 0 0 15px 8px red;
+  }
+
+  66% {
+    border-color: gold;
+    box-shadow: 0 0 15px 8px gold;
+  }
+
+  100% {
+    border-color: cyan;
+    box-shadow: 0 0 15px 8px cyan;
+  }
 }
