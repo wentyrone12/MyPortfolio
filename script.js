@@ -5,10 +5,12 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = document.body.classList.contains("light-mode") ? "🌙" : "☀️";
 });
 
+
 document.addEventListener("contextmenu", function(e){
   e.preventDefault();
   alert("Right click is disabled!");
 });
+
 
 // Mobile Menu Toggle
 const menuToggle = document.getElementById("menu-toggle");
