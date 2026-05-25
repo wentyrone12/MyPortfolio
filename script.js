@@ -5,11 +5,9 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = document.body.classList.contains("light-mode") ? "🌙" : "☀️";
 });
 
-
 document.addEventListener("contextmenu", function(e){
   e.preventDefault();
-});
-
+}); 
 
 // Mobile Menu Toggle
 const menuToggle = document.getElementById("menu-toggle");
@@ -68,7 +66,7 @@ document.getElementById("contact-form")
     alert("Message sent successfully!");
     });
     }, (error) => {
-        alert("❌ Failed to send. Check console.");
+        alert("❌ Failed to send.");
         console.log(error);
     });
 

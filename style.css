@@ -211,7 +211,7 @@ button:hover {
     background: linear-gradient(270deg, cyan, red, gold, cyan);
     background-size: 600% 600%;
     animation: bgMove 8s ease infinite;
-    transition: 0.4s ease;
+    transition: 0.2s ease;
     text-align: center;
 }
 @keyframes bgMove {
@@ -297,14 +297,14 @@ button:hover {
     background-color: transparent;
     border: 1px solid gray;
     box-shadow: 0 0 2px 2px var(--btn-color);
-    transition: 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
     animation: glowCycle 4s infinite linear;
     filter: blur(2px);
 }
 .container:hover{
     border: 2px solid red;
     filter: blur(0);
-    transition: 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
     transform: scale(1.1);
 }
 .btn-links{
