@@ -5,9 +5,9 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = document.body.classList.contains("light-mode") ? "🌙" : "☀️";
 });
 
-document.addEventListener("contextmenu", function(e){
-  e.preventDefault();
-}); 
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
 
 // Mobile Menu Toggle
 const menuToggle = document.getElementById("menu-toggle");
@@ -50,21 +50,21 @@ document.addEventListener("click", (e) => {
 });
 
 // ===== EMAILJS SETUP =====
-(function(){
+(function () {
     emailjs.init("enAOKJPdomfdmxicm");
 })();
 
 document.getElementById("contact-form")
-.addEventListener("submit", function(e) {
-    e.preventDefault();
+    .addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    emailjs.sendForm(
-        "service_ctswgbf",
-        "template_0ht11m9",
-        this
-    ).then(() => {
-    alert("Message sent successfully!");
-    });
+        emailjs.sendForm(
+            "service_ctswgbf",
+            "template_0ht11m9",
+            this
+        ).then(() => {
+            alert("Message sent successfully!");
+        });
     }, (error) => {
         alert("❌ Failed to send.");
         console.log(error);
