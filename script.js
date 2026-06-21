@@ -70,3 +70,15 @@ document.getElementById("contact-form")
         console.log(error);
     });
 
+tsParticles.load("tsparticles", {
+    fullScreen: { enable: true, zIndex: -1 },
+    particles: {
+        number: { value: 60 },
+        color: { value: "#00ff88" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1 }
+    }
+});
+
