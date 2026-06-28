@@ -7,11 +7,12 @@
     <title>Wendell Tyrone Portfolio</title>
     <link rel="icon" href="pfp.jpg">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-    
+
     <div id="tsparticles"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
@@ -55,6 +56,34 @@
     </section>
 
     <section id="about" class="section">
+
+        <div class="stats">
+
+            <div class="card">
+                <h1 id="projects">0</h1>
+                <p>Projects</p>
+            </div>
+
+            <div class="card">
+                <h1 id="clients">0</h1>
+                <p>Systems Built</p>
+            </div>
+
+            <div class="card">
+                <h1 id="languages">0</h1>
+                <p>Languages</p>
+            </div>
+
+            <div class="card">
+                <h1 id="experience">0</h1>
+                <p>Years Learning</p>
+            </div>
+
+        </div>
+
+        <br><br>
+
+
         <h2>About Me</h2>
         <p>
             My name is <span style="color: green;">Wendell Tyrone Ang Jimenez</span>, a hardworking and determined <span
@@ -118,6 +147,17 @@
     </section>
 
     <section id="skills" class="section">
+
+        <div class="graph-box">
+
+            <h2>Skill Growth</h2>
+
+            <canvas id="skillChart"></canvas>
+
+        </div>
+
+        <br><br>
+
         <h2>My Skills</h2>
         <div class="skill">
             <p>HTML</p>
@@ -209,7 +249,32 @@
             <textarea name="message" placeholder="Message" required></textarea>
             <button type="submit">Send</button>
         </form>
+
+        <footer class="footer">
+
+            <h3>Wendell Tyrone Ang Jimenez</h3>
+
+            <p>Full Stack Developer • Software Engineer • Cybersecurity Enthusiast</p>
+
+            <div class="footer-links">
+
+                <a href="https://wentyrone12.github.io/" target="_blank">GitHub</a>
+
+                <a href="https://facebook.com/wendell.jimenez.12" target="_blank">Facebook</a>
+
+                <a href="#">LinkedIn</a>
+
+            </div>
+
+            <hr>
+
+            <small>
+                © 2026 Wendell Tyrone Ang Jimenez. All Rights Reserved.
+            </small>
+
+        </footer>
     </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="script.js"></script>
