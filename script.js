@@ -17,9 +17,26 @@ toggleBtn.addEventListener("click", async () => {
 
 });
 
+let particleTheme = 0;
 
-document.addEventListener("contextmenu", function(e){
-  e.preventDefault();
+const bgButton = document.getElementById("changeBg");
+
+bgButton.addEventListener("click", async () => {
+
+    particleTheme++;
+
+    if (particleTheme > 5)
+        particleTheme = 0;
+
+    await tsParticles.dom().forEach(p => p.destroy());
+
+    loadParticles();
+
+});
+
+
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
 });
 
 
@@ -88,6 +105,83 @@ function loadParticles() {
 
     const isLight = document.body.classList.contains("light-mode");
 
+    // 0 Green Network
+    const themes = [
+
+        // 0 Green Network
+        {
+            number: 70,
+            color: isLight ? "#000000" : "#00ff88",
+            shape: "circle",
+            links: true,
+            speed: 1.2,
+            size: { min: 2, max: 5 }
+        },
+
+        // 1 Galaxy
+        {
+            number: 220,
+            color: ["#ffffff", "#7dd3fc", "#8b5cf6"],
+            shape: "star",
+            links: false,
+            speed: 0.15,
+            size: { min: 1, max: 3 },
+            background: "#050816"
+        },
+
+        // 2 Meteor Shower
+        {
+            number: 90,
+            color: "#ffffff",
+            shape: "circle",
+            links: false,
+            speed: 12,
+            direction: "bottom-right",
+            size: { min: 1, max: 4 },
+            trails: true,
+            background: "#000814"
+        },
+
+        // 3 Rain
+        {
+            number: 350,
+            color: "#80d8ff",
+            shape: "line",
+            links: false,
+            speed: 18,
+            direction: "bottom",
+            size: { min: 8, max: 18 },
+            background: "#111827"
+        },
+
+        // 4 Snow
+        {
+            number: 180,
+            color: "#ffffff",
+            shape: "circle",
+            links: false,
+            speed: 1,
+            direction: "bottom",
+            size: { min: 2, max: 7 },
+            background: "#0f172a"
+        },
+
+        // 5 Fireflies
+        {
+            number: 70,
+            color: "#ffd54f",
+            shape: "circle",
+            links: false,
+            speed: .6,
+            size: { min: 2, max: 6 },
+            background: "#07140a"
+        }
+
+    ];
+
+
+    const t = themes[particleTheme];
+
     tsParticles.load("tsparticles", {
 
         fullScreen: {
@@ -97,45 +191,46 @@ function loadParticles() {
 
         background: {
             color: {
-                value: "transparent"
+                value: t.background || "transparent"
             }
         },
-
         particles: {
 
             number: {
-                value: 70
+                value: t.number
             },
 
             color: {
-                value: isLight ? "#000000" : "#00ff88"
-            },
-
-            links: {
-                enable: true,
-                color: isLight ? "#000000" : "#00ff88",
-                distance: 150,
-                opacity: 0.35
+                value: t.color
             },
 
             shape: {
-                type: "circle"
+                type: t.shape
             },
 
             opacity: {
-                value: 0.5
+                value: .6
             },
 
             size: {
-                value: {
-                    min: 2,
-                    max: 5
-                }
+                value: t.size
             },
 
             move: {
                 enable: true,
-                speed: 1.2
+                speed: t.speed,
+                direction: t.direction || "none",
+                straight: t.trails || false,
+                outModes: {
+                    default: "out"
+                }
+            },
+
+            links: {
+                enable: t.links,
+                color: t.color,
+                distance: 150,
+                opacity: .35
             }
 
         }
