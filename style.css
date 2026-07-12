@@ -7,8 +7,8 @@
 
 :root {
     --bg-color: #111;
-    --text-color: white;
-    --secondary-color: #222;
+    --text-color: rgb(201, 15, 15);
+    --secondary-color: #000000a2;
 
     --btn-color: gold;
     --btn-cl: gold;
@@ -17,12 +17,12 @@
 
 body.light-mode {
     --bg-color: rgb(215, 215, 215);
-    --text-color: #111;
-    --secondary-color: #eee;
+    --text-color: #fffefe;
+    --secondary-color: #0e0d31ce;
 
-    --btn-color: black;
+    --btn-color: rgb(255, 0, 0);
     --btn-cl: red;
-    --btn-colors: green;
+    --btn-colors: rgb(36, 143, 22);
 }
 
 body {
@@ -31,6 +31,10 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: 0.4s;
+}
+
+p{
+    color:var(--text-color);
 }
 
 /* PROFILE PICTURE */
@@ -523,3 +527,22 @@ button:hover {
     }
 }
 
+#tsparticles {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#tsparticles canvas {
+    transition:
+        opacity .8s ease,
+        transform .8s ease,
+        filter .8s ease;
+}
+
+#tsparticles.fade canvas {
+    opacity: 0;
+    transform: scale(.08);
+    filter: blur(10px);
+}
