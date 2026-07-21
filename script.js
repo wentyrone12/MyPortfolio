@@ -239,7 +239,7 @@ function loadParticles() {
         // 2 Meteor Shower
         {
             number: 90,
-            color: "#ffffff",
+            color: "#797676",
             shape: "circle",
             links: false,
             speed: 12,
@@ -312,21 +312,6 @@ function loadParticles() {
             },
             background: "#000000",
             trails: true
-        },
-
-        // 8 Sakura
-        {
-            number: 170,
-            color: "#ff9ecb",
-            shape: "circle",
-            links: false,
-            speed: 2,
-            direction: "bottom",
-            size: {
-                min: 3,
-                max: 9
-            },
-            background: "#fff4fa"
         },
         // 9 Shooting Stars
         {
