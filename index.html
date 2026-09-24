@@ -2,283 +2,366 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wendell Tyrone Portfolio</title>
-    <link rel="icon" href="pfp.jpg">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07110d">
+  <meta name="description" content="Wendell Tyrone A. Jimenez — IT student and aspiring software engineer.">
+  <title>Wendell Tyrone | Portfolio</title>
+  <link rel="icon" href="pfp.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div id="tsparticles" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home">
+        <img class="pfp" src="pfp.jpg" alt="Wendell's profile photo">
+        <span>Wendell<span class="brand-dot">.dev</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="toggleMode" type="button" aria-label="Toggle light mode"
+          title="Toggle theme">☼</button>
+        <button class="icon-btn" id="changeBg" type="button" aria-label="Change particle background"
+          title="Change background">✳</button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation"
+          aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
 
-
-    <div id="tsparticles"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-
-    <header>
-        <nav class="navbar">
-            <div class="nav-left">
-                <img class="pfp" src="pfp.jpg" width="35" height="35">
-                <div class="logo"><b>Wendell Tyrone</b></div>
-            </div>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <div class="nav-right">
-                <button id="toggleMode">🌙</button>
-                <button id="changeBg">🎨</button>
-                <div class="menu-toggle" id="menu-toggle">☰</div>
-            </div>
-        </nav>
-    </header>
-
-    <section id="home" class="section">
-        <h1>Hi, I'm <span style="color: var(--btn-cl);">Wendell Tyrone A. Jimenez</span></h1>
-        <p>Full Stack Developer, Backend Developer, Network Engineer, Software Engineer, Cybersecurity, aspiring
-            Ethical Hacker and AI Prompt Engineer. I strive to build projects that are impactful and innovative.</p>
-        <divs>
-            <a class="link-tag" href="https://wentyrone12.github.io" target="_blank">GitHub</a> |
-            <a class="link-tag" href="https://www.facebook.com/wendell.jimenez.12" target="_blank">Facebook</a>
-            </div>
-
-            <div class="btn-container">
-                <button class="btn-project"><a class="btn-projecttext" href="myproject.html">View my
-                        Project</a></button>
-            </div>
-
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> IT STUDENT · BUILDER · LIFELONG LEARNER</div>
+          <h1>Hi, I’m <span class="gradient-text">Wendell Tyrone</span> Jimenez.</h1>
+          <p class="hero-lead">I turn ideas into thoughtful, useful digital experiences.</p>
+          <p class="hero-description">BS Information Technology student at Cotabato State University, exploring web
+            development, software engineering, networking, and cybersecurity—one project at a time.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" id="viewtag" href="myproject.html">Explore my projects <span
+                aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="#contact">Let’s connect</a>
+          </div>
+          <div class="social-row">
+            <a href="https://wentyrone12.github.io" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+            <a href="https://www.facebook.com/wendell.jimenez.12" target="_blank" rel="noopener noreferrer">Facebook
+              <span>↗</span></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="profile-card">
+            <div class="profile-card-top"><span class="mini-label">CURRENT FOCUS</span><span class="live-pill">●
+                LEARNING</span></div>
+            <div class="avatar-wrap"><img src="pfp.jpg" alt="Wendell Tyrone"></div>
+            <h2>Wendell Tyrone A. Jimenez</h2>
+            <p> FUTURE <br> Software Engineer, Network Engineer & Cybersecurity Engineer</p>
+            <div class="profile-divider"></div>
+            <div class="focus-list"><span><i>01</i> Web & app development</span><span><i>02</i> Database
+                systems</span><span><i>03</i> Networks & security</span></div>
+            <div class="card-glow"></div>
+          </div>
+          <div class="floating-chip chip-code"><span>&lt;/&gt;</span> Build with purpose</div>
+          <div class="floating-chip chip-location">✦ Cotabato City, PH</div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
     </section>
 
     <section id="about" class="section">
-
-        <div class="stats">
-
-            <div class="card">
-                <h1 id="projects">0</h1>
-                <p>Projects</p>
-            </div>
-
-            <div class="card">
-                <h1 id="clients">0</h1>
-                <p>Systems Built</p>
-            </div>
-
-            <div class="card">
-                <h1 id="languages">0</h1>
-                <p>Languages</p>
-            </div>
-
-            <div class="card">
-                <h1 id="experience">0</h1>
-                <p>Years Learning</p>
-            </div>
-
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">A LITTLE ABOUT ME</span>
+          <h2>Curiosity is my <span class="gradient-text">starting point.</span></h2>
+          <p>I’m a hardworking and determined IT student who enjoys learning by building. I like making practical
+            systems, refining the user experience, and understanding how things work behind the screen.</p>
         </div>
-
-        <br><br>
-
-
-        <h2>About Me</h2>
-        <p>
-            My name is <span style="color: green;">Wendell Tyrone Ang Jimenez</span>, a hardworking and determined <span
-                style="color: green;">20 years old BSINFOTECH Student </span> from <span style="color: green;">Cotabato
-                State University</span>.I am passionate about programming, web development, and creating projects that
-            help others.
-        </p>
-        <p>
-            I enjoy learning new technologies, coding automation tools, and exploring strategies to improve efficiency.
-            Through my projects, I have gained experience in <span style="color: var(--btn-cl);"> C#, JavaScript, C++,
-                MySQL, PHP, HTML, and CSS,</span> along with a solid understanding of system logic, user interface
-            design, and basic backend concepts. I focus on building clean, efficient, and user-friendly applications
-            that solve simple problems in creative ways.
-        </p>
-
+        <div class="stats-grid">
+          <article class="stat-card"><strong id="projects">0</strong><span>Personal projects</span><small>Ideas brought
+              to life</small></article>
+          <article class="stat-card"><strong id="clients">0</strong><span>Systems built</span><small>Practice through
+              making</small></article>
+          <article class="stat-card"><strong id="languages">0</strong><span>Tech areas</span><small>Always
+              exploring</small></article>
+          <article class="stat-card"><strong id="experience">0</strong><span>Years learning</span><small>And still
+              growing</small></article>
+        </div>
+        <div class="about-grid">
+          <div class="about-note">
+            <div class="note-icon">✦</div>
+            <h3>My approach</h3>
+            <p>Start with the problem, map the flow, then build a clear and accessible solution. I value steady
+              improvement, useful feedback, and code that’s easier to maintain.</p>
+          </div>
+          <div class="about-details">
+            <div class="detail-row"><span class="detail-label">EDUCATION</span><strong>BS Information
+                Technology</strong></div>
+            <div class="detail-row"><span class="detail-label">SCHOOL</span><strong>Cotabato State University</strong>
+            </div>
+            <div class="detail-row"><span class="detail-label">INTERESTS</span><strong>Web apps, UI/UX, databases,
+                networking & cybersecurity</strong></div>
+            <div class="detail-row"><span class="detail-label">GOAL</span><strong>Become a thoughtful, capable software
+                engineer</strong></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="experience" class="section">
-        <h2>Experience</h2>
-        <ul>
-
-            <li class="link">
-                Full-Stack Web Application Developer – White E-Wallet System
-            </li>
-
-            <li class="link">
-                Developed multiple web-based systems using HTML, CSS, JavaScript, PHP, and MySQL
-            </li>
-
-            <li class="link">
-                Creator of White Message System (Real-time Messenger Application)
-            </li>
-
-            <li class="link">
-                Security Testing & Vulnerability Assessment (Basic Penetration Testing)
-            </li>
-
-            <li class="link">
-                Developed Mini Messenger System with real-time messaging features
-            </li>
-
-            <li class="link">
-                Front-End Developer & UI/UX Designer for Web-Based Applications
-            </li>
-
-        </ul>
+    <section id="experience" class="section section-soft">
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">WHAT I’VE BEEN WORKING ON</span>
+          <h2>Learning through <span class="gradient-text">real projects.</span></h2>
+          <p>Hands-on experience from personal and academic builds, with a focus on practical features and continuous
+            learning.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker">01</div>
+            <div class="timeline-content"><span class="timeline-type">WEB APPLICATION</span>
+              <h3>White E-Wallet System</h3>
+              <p>Built a learning-focused digital wallet concept and explored account flows, balances, and transaction
+                records.</p>
+              <div class="tag-row"><span>C#</span><span>Application logic</span><span>File handling</span></div>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker">02</div>
+            <div class="timeline-content"><span class="timeline-type">REAL-TIME WEB APP</span>
+              <h3>White Message System</h3>
+              <p>Created a messenger-style project with real-time messaging concepts and user-focused interface
+                features.</p>
+              <div class="tag-row"><span>JavaScript</span><span>Firebase</span><span>UI/UX</span></div>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker">03</div>
+            <div class="timeline-content"><span class="timeline-type">WEB DEVELOPMENT</span>
+              <h3>Multiple web-based systems</h3>
+              <p>Practiced front-end development and database integration while building and iterating on small systems.
+              </p>
+              <div class="tag-row"><span>HTML/CSS</span><span>PHP</span><span>MySQL</span></div>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker">04</div>
+            <div class="timeline-content"><span class="timeline-type">FOUNDATIONAL SECURITY</span>
+              <h3>Security testing & networking practice</h3>
+              <p>Exploring core networking and web security concepts in learning environments, with an emphasis on
+                responsible practice.</p>
+              <div class="tag-row"><span>Networking</span><span>Web security</span><span>Labs</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="services" class="section">
-        <h2>Services</h2>
-        <div class="service-container">
-            <div class="service-box">Web Application Development</div>
-            <div class="service-box">Modern UI/UX Design & Interface Styling</div>
-            <div class="service-box">Automation Systems & Development Tools</div>
-            <div class="service-box">Database Design & Integration (MySQL, Firebase, SQL Server)</div>
-            <div class="service-box">Custom C# Desktop & Console Applications</div>
-            <div class="service-box">GitHub & Deployment Management</div>
-            <div class="service-box">Authentication & Security Implementation</div>
-            <div class="service-box">Chatbot & Basic AI Automation Systems</div>
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">HOW I CAN HELP</span>
+          <h2>Things I’m building <span class="gradient-text">skills in.</span></h2>
+          <p>Areas I can support through student projects, prototypes, and small web solutions.</p>
         </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">⌘</div>
+            <h3>Web application development</h3>
+            <p>Responsive front-end pages and functional web prototypes.</p><span class="service-number">01</span>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">◇</div>
+            <h3>UI/UX & interface styling</h3>
+            <p>Clean layouts, accessible interactions, and polished visual details.</p><span
+              class="service-number">02</span>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">▦</div>
+            <h3>Database design</h3>
+            <p>Organizing data and connecting projects to MySQL or Firebase.</p><span class="service-number">03</span>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">⌘</div>
+            <h3>Automation & tools</h3>
+            <p>Small utilities and workflow helpers that reduce repetitive steps.</p><span
+              class="service-number">04</span>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">▣</div>
+            <h3>C# applications</h3>
+            <p>Console-based and beginner desktop application development.</p><span class="service-number">05</span>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">↗</div>
+            <h3>Deployment & project setup</h3>
+            <p>GitHub-based project organization and basic deployment support.</p><span class="service-number">06</span>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="skills" class="section">
-
-        <div class="graph-box">
-
-            <h2>Skill Growth</h2>
-
-            <canvas id="skillChart"></canvas>
-
+    <section id="skills" class="section section-soft">
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">TOOLS & TECHNOLOGIES</span>
+          <h2>Growing my <span class="gradient-text">toolkit.</span></h2>
+          <p>Self-assessed familiarity levels for the technologies I’m currently learning and practicing.</p>
         </div>
-
-        <br><br>
-
-        <h2>My Skills</h2>
-        <div class="skill">
-            <p>HTML</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="98%" data-color="#E44D26"></div>
+        <div class="skills-layout">
+          <div class="skills-panel">
+            <div class="panel-heading">
+              <div><span class="panel-kicker">CURRENT SKILLSET</span>
+                <h3>Technical skills</h3>
+              </div><span class="panel-symbol">✳</span>
             </div>
-        </div>
-        <div class="skill">
-            <p>CSS</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="93%" data-color="#1572B6"></div>
+            <div class="skill-list">
+              <div class="skill">
+                <div class="skill-meta"><span>HTML</span><b>98%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="98%" style="--skill-color:#e76f51"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>CSS</span><b>93%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="93%" style="--skill-color:#3994d6"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>C#</span><b>89%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="89%" style="--skill-color:#8b5cf6"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Python</span><b>87%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="87%" style="--skill-color:#e0b34b"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>MySQL</span><b>85%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="85%" style="--skill-color:#48b6c8"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>JavaScript</span><b>80%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="80%" style="--skill-color:#e8c547"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>PHP</span><b>79%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="79%" style="--skill-color:#7775c8"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Java</span><b>68%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="68%" style="--skill-color:#d96b57"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Web security</span><b>60%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="60%" style="--skill-color:#35b978"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Networking</span><b>50%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="50%" style="--skill-color:#6595d9"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>C++</span><b>45%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="45%" style="--skill-color:#4aa8dc"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Node.js</span><b>40%</b></div>
+                <div class="skill-bar">
+                  <div class="progress" data-width="40%" style="--skill-color:#7eae61"></div>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="skill">
-            <p>JavaScript</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="80%" data-color="#F7DF1E"></div>
+          </div>
+          <div class="growth-panel">
+            <div class="panel-heading">
+              <div><span class="panel-kicker">MY LEARNING JOURNEY</span>
+                <h3>Skill growth</h3>
+              </div><span class="panel-symbol">↗</span>
             </div>
+            <p class="chart-note">Illustrative personal learning progress over time.</p>
+            <div class="chart-wrap"><canvas id="skillChart" aria-label="Illustrative skill growth line chart"
+                role="img"></canvas></div>
+            <div class="growth-foot"><span class="status-dot"></span> Consistency over perfection</div>
+          </div>
         </div>
-        <div class="skill">
-            <p>C#</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="89%" data-color="#239120"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>PHP</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="79%" data-color="#535196"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>PYTHON</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="87%" data-color="#DECBA6"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>MySQL</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="85%" data-color="#ADD8E5"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>C++</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="45%" data-color="#08CDFF"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>Node.js</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="40%" data-color="#0047ab"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>JAVA</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="68%" data-color="#5C0808"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>NETWORKING</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="50%" data-color="#0F0F94"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p> WEB SECURITY</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="60%" data-color="#3DF568"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>CYBERSECURITY (Pen Testing & Defense)</p>
-            <div class="skill-bar">
-                <div class="progress" data-width="70%" data-color="#00E5FF"></div>
-            </div>
-        </div>
-
-
+      </div>
     </section>
 
     <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" name="from_name" placeholder="Name" required>
-            <input type="email" name="from_email" placeholder="Email" required>
-            <textarea name="message" placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
+      <div class="container contact-grid">
+        <div class="contact-copy"><span class="section-kicker">HAVE A PROJECT IN MIND?</span>
+          <h2>Let’s make something <span class="gradient-text">meaningful.</span></h2>
+          <p>Have a question, idea, or collaboration in mind? Send a message and I’ll get back to you.</p>
+          <div class="contact-mini"><span class="contact-icon">✉</span>
+            <div><small>EMAIL</small><strong>Use the contact form</strong></div>
+          </div>
+          <div class="contact-mini"><span class="contact-icon">⌖</span>
+            <div><small>LOCATION</small><strong>Cotabato City, Philippines</strong></div>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <div class="form-heading">
+            <h3>Send a message</h3>
+            <p>Fields marked * are required.</p>
+          </div>
+          <label for="contact-name">Your name *</label><input id="contact-name" type="text" name="from_name"
+            placeholder="e.g. Wendell Tyrone Jimenez" required>
+          <label for="contact-email">Email address *</label><input id="contact-email" type="email" name="from_email"
+            placeholder="wendelltyrone123@example.com" required>
+          <label for="contact-message">Message *</label><textarea style="resize: none;" id="contact-message" name="message"
+            placeholder="Interesting?? come and join......" rows="5" required></textarea>
+          <button class="btn btn-primary submit-btn" type="submit">Send message <span
+              aria-hidden="true">↗</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
-
-        <footer class="footer">
-
-            <h3>Wendell Tyrone Ang Jimenez</h3>
-
-            <p>Full Stack Developer • Software Engineer • Cybersecurity Enthusiast</p>
-
-            <div class="footer-links">
-
-                <a href="https://wentyrone12.github.io/" target="_blank">GitHub</a>
-
-                <a href="https://facebook.com/wendell.jimenez.12" target="_blank">Facebook</a>
-
-                <a href="#">LinkedIn</a>
-
-            </div>
-
-            <hr>
-
-            <small>
-                © 2026 Wendell Tyrone Ang Jimenez. All Rights Reserved.
-            </small>
-
-        </footer>
+      </div>
     </section>
+  </main>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="script.js"></script>
+  <footer class="footer">
+    <div class="container footer-inner"><a class="brand footer-brand" href="#home">Wendell<span
+          class="brand-dot">.</span></a>
+      <p>Made by <a style="color: red;"> Wendell Tyrone A. Jimenez</a><br> Future Software Engineer, Network Engineer & Cybersecurity Engineer</p>
+      <div class="footer-links"><a href="https://wentyrone12.github.io" target="_blank" rel="noopener noreferrer">GitHub
+          ↗</a><a href="https://www.facebook.com/wendell.jimenez.12" target="_blank" rel="noopener noreferrer">Facebook
+          ↗</a></div><small>© 2026 Wendell Tyrone A. Jimenez. All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
