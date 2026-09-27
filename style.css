@@ -13,7 +13,7 @@
   --header: rgba(7, 17, 13, .78);
   --shadow: 0 24px 70px rgba(0, 0, 0, .28);
 
-  --w1:gold;
+  --w1: gold;
 }
 
 
@@ -31,7 +31,7 @@ body.light-mode {
   --header: rgba(244, 248, 245, .82);
   --shadow: 0 24px 70px rgba(31, 69, 43, .10);
 
-  --w1:red;
+  --w1: red;
 }
 
 * {
@@ -372,7 +372,7 @@ h3 {
   transition: 0.2s ease-in-out;
 }
 
-.hero-visual:hover{
+.hero-visual:hover {
   transition: 0.2s ease-in;
   transform: rotate(-4deg);
 }
@@ -390,7 +390,7 @@ h3 {
   z-index: 2;
 }
 
-.profile-card:hover{
+.profile-card:hover {
   color: red;
 }
 
@@ -1063,6 +1063,27 @@ body.light-mode .profile-card {
 }
 
 @media (max-width: 900px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background: var(--header);
+    border-bottom: 1px solid rgba(67, 34, 34, 0.244);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
   .nav-links {
     gap: 14px;
   }
